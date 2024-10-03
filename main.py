@@ -12,20 +12,14 @@ else:
     if user == computer:
         print ("draw")
 
-    elif user == "rock":
-        if computer == "scissors":
+    elif user == "rock" and computer == "scissors":
             print("you win")
-        else:
-            print("you lose")
 
-    elif user == "paper":
-        if computer == "rock":
+    elif user == "paper" and computer == "rock":
             print("you win")
-        else:
-            print("you lose")
 
-    elif user == "scissors":
-        if computer == "paper":
+    elif user == "scissors" and computer == "paper":
             print("you win")
-        else:
-            print("you lose")
+
+    else:
+        print("you lose")
