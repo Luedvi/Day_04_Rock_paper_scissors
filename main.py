@@ -30,20 +30,13 @@ import random
 npc=random.randint(0,2)
 user=int(input("What do you choose? Type 0 for Rock, 1 for Paper or 2 for Scissors\n"))
 
-if npc==user:
-    print("It's a draw")
-elif user==0:
-    if npc==1:
-        print("You lose")
-    else:
-        print("You win!")
-elif user==1:
-    if npc==2:
-        print("You lose")
-    else:
-        print("You win!")
+if user == npc:
+    print("draw")
+elif user == 0 and npc == 2:
+    print("you win")
+elif npc == 0 and user == 2:
+    print("you lose")
+elif user > npc:
+    print("you win")
 else:
-    if npc==0:
-        print("You lose")
-    else:
-        print("You win!")
+    print("you lose")
