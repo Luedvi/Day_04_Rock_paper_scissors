@@ -8,13 +8,12 @@ def choose_options():
 
   if not user_option in options:
     print('Invalid option')
-    return None, None
-
-  computer_option = random.choice(options)
-
-  print('User option =>', user_option)
-  print('Computer option =>', computer_option)
-  return user_option, computer_option
+    choose_options()
+  else:
+    computer_option = random.choice(options)
+    print('User option =>', user_option)
+    print('Computer option =>', computer_option)
+    return user_option, computer_option
 
 def check_rules(user_option, computer_option, user_wins, computer_wins):
   if user_option == computer_option:
